@@ -1,0 +1,9 @@
+name: Stanny Nuytkens
+description: a blog
+author_email: stanny@nuytkens.com
+url: https://stanny.nuytkens.com
+timezone: "Europe/Brussels"
+encoding": "utf-8"
+permalink: pretty
+paginate: 5
+safe: true
