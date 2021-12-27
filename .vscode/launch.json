@@ -6,11 +6,7 @@
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "url": "http://localhost:4000",
-            "preLaunchTask": "Start jekyll",
-            "postDebugTask": {
-                "type": "shell",
-                "command": "kill $(pidof -s ruby2.7)" // not working!
-            }
+            "preLaunchTask": "Start jekyll"
         }
     ]
 }

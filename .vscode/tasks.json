@@ -2,9 +2,20 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Start jekyll (drafts, future)",
-            "command": "jekyll",
+            "label": "Bundle install",
+            "command": "bundle",
             "args": [
+                "install"
+            ],
+            "type": "shell",
+            "problemMatcher": []
+        },
+        {
+            "label": "Start jekyll (drafts, future)",
+            "command": "bundle",
+            "args": [
+                "exec",
+                "jekyll",
                 "serve",
                 "-w",
                 "-D",
@@ -15,14 +26,16 @@
         },
         {
             "label": "Start jekyll",
-            "command": "jekyll",
-            "args": [
+            "command": "bundle",
+            "args": [ 
+                "exec",
+                "jekyll",
                 "serve",
                 "-w",
                 "--livereload"
             ],
             "type": "shell",
-            "problemMatcher": []
+            "problemMatcher": [],
         },
     ],
 }
