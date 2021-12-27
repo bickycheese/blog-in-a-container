@@ -2,24 +2,43 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Bundle install",
+            "label": "Clean",
             "command": "bundle",
             "args": [
-                "install"
+                "exec",
+                "jekyll",
+                "clean"
             ],
             "type": "shell",
             "problemMatcher": []
         },
         {
-            "label": "Start jekyll (drafts, future)",
+            "label": "Build (production)",
+            "command": "bundle",
+            "args": [
+                "exec",
+                "jekyll",
+                "build",
+                "--config",
+                "_config.yml",
+                "JEKYLL_ENV=production",
+            ],
+            "type": "shell",
+            "problemMatcher": []
+        },
+        {
+            "label": "Start jekyll (drafts + future)",
             "command": "bundle",
             "args": [
                 "exec",
                 "jekyll",
                 "serve",
-                "-w",
-                "-D",
-                "--future"
+                "--watch",
+                "--drafts",
+                "--incremental",
+                "--future",
+                "--config",
+                "_config.yml,_config_dev.yml",
             ],
             "type": "shell",
             "problemMatcher": []
@@ -31,8 +50,11 @@
                 "exec",
                 "jekyll",
                 "serve",
-                "-w",
-                "--livereload"
+                "--watch",
+                "--incremental",
+                "--livereload",
+                "--config",
+                "_config.yml,_config_dev.yml",
             ],
             "type": "shell",
             "problemMatcher": [],

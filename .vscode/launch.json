@@ -4,9 +4,9 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
+            "name": "Launch",
             "url": "http://localhost:4000",
-            "preLaunchTask": "Start jekyll"
+            "preLaunchTask": "Start jekyll (drafts + future)"
         }
     ]
 }
